@@ -1,7 +1,7 @@
-//WebSocket
-
 
 const socket= io.connect()
+
+// Functions
 
 const addProduct = (e)=>{
     const name= document.querySelector('#name').value
@@ -15,9 +15,11 @@ const addProduct = (e)=>{
 const addMessages = (e) =>{
     const mail = document.querySelector('#mail').value
     const text = document.querySelector('#text').value
-    socket.emit('new-message', ({mail, text}))
+    const time = new Date().toString()
+    socket.emit('new-message', ({mail, text, time}))
+    reset(text)
     return false
-}
+}   
 
 const render = (array)=>{
     if(!array.length){
@@ -49,19 +51,22 @@ const render = (array)=>{
 const renderMsg= (arrayMsj)=>{
     const html= arrayMsj.map((elem)=>{
         return(`<div>
-                <em><strong>${elem.mail}</strong>:</em>
-                <em>${elem.text}</em> </div>`)
+                <em style="color: #996515"><strong style="color: blue">${elem.mail}</strong>[${elem.time}]:</em>
+                <em style="font-style: italic; color: #008000">${elem.text}</em> </div>`)
     }).join("")
     document.getElementById('messages').innerHTML = html;
 }
 
+const reset=(campo)=>{
+    document.querySelector(`#${campo}`).value = ''
+}
+
+//WebSocket
 
 socket.on('products', (data)=>{
-    console.log(data)
     render(data)
 })
 
 socket.on('messages', (data)=>{
-    console.log('se estan recibiendo los mensajes', data)
     renderMsg(data)
 })
