@@ -1,0 +1,28 @@
+[
+	{
+		"timestamp": "13/10/2022, 18:20:42",
+		"products": [
+			{
+				"timestamp": "13/10/2022, 11:53:47",
+				"nombre": "Zapas azuleeeeeees",
+				"descripcion": "zapatillas nike rojas",
+				"codigo": "AAAB21",
+				"foto": "https://http2.mlstatic.com/D_NQ_NP_944025-MLA46284126009_062021-W.jpg",
+				"precio": 1700,
+				"stock": 20,
+				"id": 2
+			}
+		],
+		"id": 1
+	},
+	{
+		"timestamp": "13/10/2022, 18:20:44",
+		"products": [],
+		"id": 2
+	},
+	{
+		"timestamp": "13/10/2022, 18:20:45",
+		"products": [],
+		"id": 3
+	}
+]
