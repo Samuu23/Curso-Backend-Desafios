@@ -1,0 +1,73 @@
+[{
+  "_id": {
+    "$oid": "635beebc75e9db6d027bcd4a"
+  },
+  "nombre": "zapatillas blancas",
+  "precio": 2000,
+  "foto": "fotoZP.jpg",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "635beebc75e9db6d027bcd4c"
+  },
+  "nombre": "zapatillas azules",
+  "precio": 2700,
+  "foto": "fotoZP3.jpg",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "635beebc75e9db6d027bcd4d"
+  },
+  "nombre": "zapatillas rojas",
+  "precio": 2850,
+  "foto": "fotoZP4.jpg",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "635beebc75e9db6d027bcd4e"
+  },
+  "nombre": "zapatillas verdes",
+  "precio": 3100,
+  "foto": "fotoZP5.jpg",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "635beebc75e9db6d027bcd4f"
+  },
+  "nombre": "remera blanca",
+  "precio": 1200,
+  "foto": "fotoRB.jpg",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "635beebc75e9db6d027bcd52"
+  },
+  "nombre": "remera roja",
+  "precio": 1800,
+  "foto": "fotoRR.jpg",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "635beebc75e9db6d027bcd53"
+  },
+  "nombre": "remera verde",
+  "precio": 2900,
+  "foto": "fotoRV.jpg",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "635c047875e9db6d027bcd5f"
+  },
+  "nombre": "remera azul",
+  "precio": 4500,
+  "foto": "fotoRA.jpg",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "635c047875e9db6d027bcd60"
+  },
+  "nombre": "zapatillas negras",
+  "precio": 5000,
+  "foto": "fotoZP2.jpg",
+  "stock": 100
+}]

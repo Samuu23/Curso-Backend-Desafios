@@ -1,0 +1,32 @@
+1. use ecommerce
+2. db.createCollection('productos')
+3. db.createCollection('mensajes')
+
+productos: nombre, precio, foto
+mensajes: mail, texto, Fecha
+
+4. db.productos.insertMany([{nombre:'zapatillas blancas', precio:2000, foto:'fotoZP.jpg'}, {nombre:'zapatillas negras', precio:5000, foto:'fotoZP2.jpg'}, {nombre:'zapatillas azules', precio:2700, foto:'fotoZP3.jpg'}, {nombre:'zapatillas rojas', precio:2850, foto:'fotoZP4.jpg'}, {nombre:'zapatillas verdes', precio:3100, foto:'fotoZP5.jpg'}, {nombre:'remera blanca', precio:1200, foto:'fotoRB.jpg'}, {nombre:'remera negra', precio:700, foto:'fotoRN.jpg'}, {nombre:'remera azul', precio:4500, foto:'fotoRA.jpg'}, {nombre:'remera roja', precio:1800, foto:'fotoRR.jpg'}, {nombre:'remera verde', precio:2900, foto:'fotoRV.jpg'}])
+
+5. db.mensajes.insertMany([{mail: 'jp@gmail.com', texto:'hola emiliano como estas ?', fecha:'18:30:00|27/10/2022'},{mail: 'er@gmail.com', texto:'hola juan todo bien y vos ?', fecha:'18:35:40|27/10/2022'}, {mail: 'ie@gmail.com', texto:'hola chicos, hicieron el tp ?', fecha:'18:36:25|27/10/2022'}, {mail: 'jp@gmail.com', texto:'justo eso estoy haciendo ivi, vos como la llevas ?', fecha:'18:37:50|27/10/2022'}, {mail: 'rt@gmail.com', texto:'todo bien por suerte, tambien haciendo el tp', fecha:'18:39:40|27/10/2022'}, {mail: 'ie@gmail.com', texto:'yo por suerte ya lo termine', fecha:'18:39:45|27/10/2022'}, {mail: 'ie@gmail.com', texto:'me resulto bastante facil', fecha:'18:40:05|27/10/2022'}, {mail: 'jp@gmail.com', texto:'jajajaja golazo', fecha:'18:45:07|27/10/2022'}, {mail: 'jp@gmail.com', texto:'la verdad que si no esta complicado', fecha:'18:45:20|27/10/2022'}, {mail: 'er@gmail.com', texto:'dejen de mandar msj y ponganse a hacerr jajaj', fecha:'18:48:38|27/10/2022'}])
+
+6. db.mensajes.find()
+7. db.productos.find()
+
+8. db.productos.countDocuments()
+9. db.mensajes.countDocuments()
+
+10. db.productos.insertOne({nombre:'zapatillas amarilla', precio:400, foto:'fotoZA.jpg'})
+
+11. db.productos.find({'nombre':'zapatillas rojas'})
+
+12. db.productos.find({'precio': {$lt: 1000}})
+13. db.productos.find( {$and: [ {'precio': {$gt: 1000}}, {'precio': {$lt: 3000}}] })
+14. db.productos.find({'precio': {$gt: 3000}})
+15. db.productos.find({},{'nombre':1}).sort({'precio':1}).skip(2).limit(1)
+
+16. db.productos.updateMany({}, {$set: {'stock':100}})
+17. db.productos.updateMany({'precio': {$gt: 4000}}, {$set: {'stock':0}})
+18. db.productos.deleteMany({'precio': {$lt: 1000}})
+19. use admin
+    db.createUser({user:'userAdmin', pwd:'samu123', roles:[{role: 'userAdminAnyDatabase', db:'admin'},'readWriteAnyDatabase']})
+    db.createUser({user:'pepe', pwd:'asd456', roles: [{role:'read', db:'ecommerce'}]})
